@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css" />
+    <meta http-equiv="refresh" content="0; url=./Src/index.html">
+    <title>Redirection Page</title>
+  </head>
+  <body>
+    <div class="container w-100 vh-100 d-flex justify-content-center align-items-center">
+      <div class="vstack gap-3 h-100 justify-content-center">
+        <div class="spinner-border text-primary mx-auto" style="width: 3rem; height: 3rem; border-width: 0.5rem" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <span class="text-center fs-6 mt-2" id="dot">Please wait while we redirect you...</span>
+        <script>
+            // animate the dots in the loading text
+            let dotElement = document.getElementById('dot');
+            let dotCount = 0;
+            setInterval(() => {
+                dotCount = (dotCount + 1) % 4;
+                dotElement.textContent = `Please wait while we redirect you${'.'.repeat(dotCount)}`;
+            }, 500);
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
