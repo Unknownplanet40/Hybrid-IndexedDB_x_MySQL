@@ -12,14 +12,24 @@
     <link rel="manifest" href="../Assets/manifest.json">
     <link rel="canonical" href="./index.html">
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../libs/sweetalert2/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="../libs/driverjs/css/driver.css">
     <link rel="stylesheet" href="../Assets/style/MainStyle.css">
     <script defer src="../libs/bootstrap/js/bootstrap.js"></script>
+    <script defer src="../libs/sweetalert2/js/sweetalert2.all.min.js"></script>
+    <!-- jQuery is required by MainScript.js for the $ global -->
     <script src="../libs/jquery/js/jquery-3.7.1.min.js"></script>
+    <!-- driver.min.js was missing; use the shipped IIFE build and load it as a deferred script -->
+    <script defer src="../libs/driverjs/js/driver.js.iife.js"></script>
     <script type="module" src="../Assets/Script/MainScript.js"></script>
 </head>
 <body>
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
-        <h1 class="text-center" id="Htitle">Welcome to HybridDB</h1>
+    <div class="container">
+        <div class="vstack d-flex justify-content-center align-items-center min-vh-100 gap-4">
+            <h1 class="text-center fw-bold" id="Htitle">Welcome to HybridDB</h1>
+            <button type="button" class="btn btn-primary" id="sweetalert2-button">Test SweetAlert2</button>
+            <button type="button" class="btn btn-secondary" id="driver-button">test Driver.js</button>
+        </div>
     </div>
 </body>
 </html>
